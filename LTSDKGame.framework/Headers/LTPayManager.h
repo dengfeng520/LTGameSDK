@@ -15,7 +15,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^loginSecuessBlocks)(NSString *infoStr);
 
 // !!!: - ================================= pay delegate
 @class TLPayManager;
@@ -24,7 +23,6 @@ typedef void(^loginSecuessBlocks)(NSString *infoStr);
 //Must be realized 必须实现
 @required
 
--(void)loginSecuess:(NSString *)infoStr;
 
 //
 @optional
@@ -34,9 +32,7 @@ typedef void(^loginSecuessBlocks)(NSString *infoStr);
 @interface LTPayManager : NSObject
 
 
--(UIViewController *)getPayView:(loginSecuessBlocks)blocks;
-
-@property (weak, nonatomic) id <PayDelegate> delegatePay;
+-(UIViewController *)getPayView;
 
 @end
 
